@@ -19,3 +19,9 @@ function render_structure ()
     right_bottom: container.querySelector("#right_bottom"),
   };
 }
+
+/* Skapar en funktion kallad render_structure. 
+Vi skapar en variabel vi kallar för container. 
+Vi hittar vår div med id:et wrapper i vår index.html fil med hjälp av querySelector("#wrapper").
+Vi vill sedan att den returnerar header left right_top, right_bottom.*/
+
