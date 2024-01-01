@@ -1,7 +1,9 @@
+function render_subject_filters(parent) {
+  const container = document.createElement("div");
+  container.id = "subject_filters";
+  parent.append(container);
 
-function render_subject_filters ()
-{
-  // Funktionen tar emot en referens till förälderelementet.
-  // Den skapar en container för alla filter-element för "subject".
-  // Se language_filters.js  
+  for (let subject of SUBJECTS) {
+    render_filter_element(container, subject.name);
+  }
 }
