@@ -13,17 +13,39 @@ function array_random_element (a) {
 }
 
 function array_find (a, test_function) {
+
+  let i = 0;
+  while (i < a.length) {
+    if (test_function(a[i])) {
+      return a[i];
+    } 
+    i = i + 1;
+  }
   // Loopar igenom arrayen a och anropar funktionen test_function med varje element i a som argument.
   // Loopen (och funktionen) avbryts när ett test_function returnerar true.
   // Funktionen returnerar elementet i a för vilken test_function returnerade true.
 }
 
 function array_filter (a, test_function) {
+  let i = 0;
+  let result = [];
+  while (i < a.length) {
+    if (test_function(a[i])) {
+      result.push(a[i]);
+    } 
+    i = i + 1;
+  }
+  return result;
   // Loopar igenom arrayen a och anropar funktionen test_function med varje element i a som argument.
   // Funktionen returnerar en ny array med alla elementet i a för vilka test_function returnerade true.
 }
 
-function array_each (a, callback) {
+function array_each (a, callback) { // a är en array, -
+  let i = 0;
+  while (i < a.length) {
+    callback(a[i]); //Callback är write on page i guess? -
+    i = i + 1;
+  } 
   // Loopar igenom arrayen a och anropar funktionen callback med varje element i a som argument.
 }
 
