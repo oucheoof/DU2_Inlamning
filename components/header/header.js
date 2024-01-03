@@ -1,7 +1,5 @@
-
-
 function render_header(container) {
-  // Create the image elements
+
   const imagePaths = [
     "media/geo_images/argentina_normal_1.jpg",
     "media/geo_images/argentina_normal_2.jpg",
@@ -146,7 +144,6 @@ function render_header(container) {
   
 
   
-  // Create and center the text
   let headerTextContainer = document.createElement("div");
   let headerText = document.createElement('h1');
   let headerText2 = document.createElement('h1');
@@ -159,6 +156,5 @@ function render_header(container) {
   
   headerTextContainer.className = "header_text";
 
-  // The actual centering and layout should be done in header.css
 }
 
