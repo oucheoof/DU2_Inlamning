@@ -21,9 +21,7 @@ function array_find (a, test_function) {
     } 
     i = i + 1;
   }
-  // Loopar igenom arrayen a och anropar funktionen test_function med varje element i a som argument.
-  // Loopen (och funktionen) avbryts när ett test_function returnerar true.
-  // Funktionen returnerar elementet i a för vilken test_function returnerade true.
+
 }
 
 function array_filter (a, test_function) {
@@ -36,22 +34,20 @@ function array_filter (a, test_function) {
     i = i + 1;
   }
   return result;
-  // Loopar igenom arrayen a och anropar funktionen test_function med varje element i a som argument.
-  // Funktionen returnerar en ny array med alla elementet i a för vilka test_function returnerade true.
+
 }
 
-function array_each (a, callback) { // a är en array, -
+function array_each (a, callback) { 
   let i = 0;
   while (i < a.length) {
-    callback(a[i]); //Callback är write on page i guess? -
+    callback(a[i]); 
     i = i + 1;
   } 
-  // Loopar igenom arrayen a och anropar funktionen callback med varje element i a som argument.
+
 }
 
 function array_map (a, transform_function) {
-  // Loopar igenom arrayen a och anropar funktionen transform_function med varje element i a som argument.
-  // Funktionen returnerar en ny array med returvärdet av varje anrop av transform_function.
+
   let result = [];
   for (let i = 0; i < a.length; i++) {
     result.push(transform_function(a[i]));
