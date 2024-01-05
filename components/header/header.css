@@ -1,47 +1,47 @@
-/* Adjust your header CSS */
+
 header {
     display: flex;
-    position: relative; /* This will be the anchor for the absolute positioning of the text */
+    position: relative; 
 }
 
-/* Style your images for flexbox */
+
 img {
     flex-grow: 1;
-    width: 33.33%; /* Assuming you want three images of equal width */
-    height: 200px; /* Keep the aspect ratio of the images */
+    width: 33.33%; 
+    height: 200px; 
     object-fit: cover;
 }
 
-/* Additional CSS for the text container */
+
 .header_text {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 33.33%; /* Start from the left edge of the second image */
-    right: 33.33%; /* End at the right edge of the second image */
-    transform: translateY(-50%); /* Adjust vertical centering */
-    text-align: center; /* Center the text horizontally */
-    color: black; /* Example text color */
+    top: 50%; 
+    left: 33.33%; 
+    right: 33.33%; 
+    transform: translateY(-50%); 
+    text-align: center; 
+    color: black; 
     font-size: large;
     font-family: "RC-Bold";
-    z-index: 2; /* Ensure the text is above the images */
+    z-index: 2; 
     text-shadow: 0px 0px 20px white;
 }
 
 .header_text2 {
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 33.33%; /* Start from the left edge of the second image */
-    right: 33.33%; /* End at the right edge of the second image */
-    transform: translateY(-50%); /* Adjust vertical centering */
-    text-align: center; /* Center the text horizontally */
-    color: black; /* Example text color */
+    top: 50%; 
+    left: 33.33%; 
+    right: 33.33%; 
+    transform: translateY(-50%); 
+    text-align: center; 
+    color: black; 
     font-size: large;
     font-family: "RC-Bold";
-    z-index: 2; /* Ensure the text is above the images */
+    z-index: 2; 
     text-shadow: 0px 0px 20px white;
 }
 
 h1 {
-    /* Style your h1 elements */
-    margin: 0; /* Remove default margins */
+    
+    margin: 0; 
 }
