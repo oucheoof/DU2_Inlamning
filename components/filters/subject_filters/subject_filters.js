@@ -10,9 +10,4 @@ function render_subject_filters (parent)
   {
     render_filter_element(container, subject.name); 
   }
-
-  
-  
-
-  
 }
