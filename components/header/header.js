@@ -1,4 +1,4 @@
-function render_header(container) {
+function render_header(container) { // Vår funktion render_header(container)
 
   const imagePaths = [
     "media/geo_images/argentina_normal_1.jpg",
@@ -134,27 +134,28 @@ function render_header(container) {
     "media/geo_images/washington_normal_1.jpg",
     "media/geo_images/washington_normal_2.jpg",
     "media/geo_images/york_normal_1.jpg",
-    "media/geo_images/york_normal_2.jpg", ];
-  for (let i = 0; i < 3; i++) {
-    let randomIndex = Math.floor(Math.random() * imagePaths.length);
-    let img = document.createElement('img');
-    img.src = imagePaths[randomIndex];
-    container.appendChild(img);
+    "media/geo_images/york_normal_2.jpg", ]; // Vi gör en variabel som håller i våra bilder.
+  
+    for (let i = 0; i < 3; i++) { //Sedan skapar jag en for-loop som loppar 3 gånger. 
+    let randomIndex = Math.floor(Math.random() * imagePaths.length); // En random index skapas.
+    let img = document.createElement('img'); // Vi skapar vårt img objekt med hjälp av DOM 
+    img.src = imagePaths[randomIndex]; // img.src är DOM, vi säger att det värdet som vårt DOM ska ha är vår sök väg, random index har värdet en random sök väg enligt ovan kod. 
+    container.appendChild(img); //Vi lägger till alla bilder till förälder elementet vilket är container. Container är positionen som vi gett i structure.js
   }
   
 
   
-  let headerTextContainer = document.createElement("div");
+  let headerTextContainer = document.createElement("div"); //Här skapar vi vår HTML objekt med DOM
   let headerText = document.createElement('h1');
   let headerText2 = document.createElement('h1');
-  headerText.textContent = "Utbytesstudier";
+  headerText.textContent = "Utbytesstudier"; //Här säger vi vad text innehållet ska innehålla.
   headerText2.textContent = "Missa inte chansen!";
   
-  container.appendChild(headerTextContainer);
-  headerTextContainer.appendChild(headerText);
-  headerTextContainer.appendChild(headerText2);
+  container.appendChild(headerTextContainer); //Lägger till texten till vår header 
+  headerTextContainer.appendChild(headerText); // Lägger till texten i vår textcontainer
+  headerTextContainer.appendChild(headerText2); //Lägger till texten i vår textcontainer
   
-  headerTextContainer.className = "header_text";
+  headerTextContainer.className = "header_text"; //Ger vår text container 
 
 }
 
