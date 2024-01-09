@@ -1,12 +1,4 @@
-// Funktionerna filter_by_level, filter_by_subject och filter_by_language
-// gör i princip exakt samma sak. Se nedan.
-// Optional:
-//    Skapa en funktion general_filter som kan ersätta alla tre funktioner ovan.
-//    Tips: 
-//      Studera noggrant funktionerna för att lista ut vad som är gemensamt för alla och vad
-//        som inte är det.
-//      Notera att den nya funktionen behöver ta emot fler parametrar än bara programmes.
-//    
+
 
 
 function filter_programmes ()

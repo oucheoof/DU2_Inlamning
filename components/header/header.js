@@ -1,31 +1,160 @@
-function render_header ()
-{
-  let newHeader = document.createElement("header");
-  let body = document.querySelector("body");
+function render_header(container) {
 
-  let newImg1 = document.createElement("img");
-  let newImg2 = document.createElement("img");
-  let newImg3 = document.createElement("img");
-
-
-  let textContainer = document.createElement("div");
-  let newH1Text = document.createElement("h1");
-  let newH1Text2 = document.createElement("h1");
-
-  newH1Text.textContent = "Utbytesstudier"
-  newH1Text2.textContent = "Missa inte chansen!"
-
-  body.appendChild(newHeader);
-  newHeader.appendChild(newImg1);
-  newHeader.appendChild(textContainer)
-  textContainer.appendChild(newH1Text);
-  textContainer.appendChild(newH1Text2);
-  newHeader.appendChild(newImg2);
-  newHeader.appendChild(newImg3);
-
+  const imagePaths = [
+    "media/geo_images/argentina_normal_1.jpg",
+    "media/geo_images/argentina_normal_2.jpg",
+    "media/geo_images/argentina_normal_3.jpg",
+    "media/geo_images/argentina_normal_4.jpg",
+    "media/geo_images/atlanta_normal_1.jpg",
+    "media/geo_images/atlanta_normal_2.jpg",
+    "media/geo_images/australia_normal_1.jpg",
+    "media/geo_images/australia_normal_2.jpg",
+    "media/geo_images/bath_normal_1.jpg",
+    "media/geo_images/bath_normal_2.jpg",
+    "media/geo_images/boston_normal_1.jpg",
+    "media/geo_images/boston_normal_2.jpg",
+    "media/geo_images/buenos_aires_normal_1.jpg",
+    "media/geo_images/buenos_aires_normal_2.jpg",
+    "media/geo_images/buffalo_normal_1.jpg",
+    "media/geo_images/buffalo_normal_2.jpg",
+    "media/geo_images/canberra_normal_1.jpg",
+    "media/geo_images/canberra_normal_2.jpg",
+    "media/geo_images/chile_normal_1.jpg",
+    "media/geo_images/chile_normal_2.jpg",
+    "media/geo_images/chile_normal_3.jpg",
+    "media/geo_images/chile_normal_4.jpg",
+    "media/geo_images/cordoba_normal_1.jpg",
+    "media/geo_images/cordoba_normal_2.jpg",
+    "media/geo_images/edinburgh_normal_1.jpg",
+    "media/geo_images/edinburgh_normal_2.jpg",
+    "media/geo_images/france_normal_1.jpg",
+    "media/geo_images/france_normal_2.jpg",
+    "media/geo_images/france_normal_3.jpg",
+    "media/geo_images/france_normal_4.jpg",
+    "media/geo_images/france_normal_5.jpg",
+    "media/geo_images/france_normal_6.jpg",
+    "media/geo_images/guadalajara_normal_1.jpg",
+    "media/geo_images/guadalajara_normal_2.jpg",
+    "media/geo_images/london_normal_1.jpg",
+    "media/geo_images/london_normal_2.jpg",
+    "media/geo_images/london_normal_3.jpg",
+    "media/geo_images/london_normal_4.jpg",
+    "media/geo_images/lund_normal_1.jpg",
+    "media/geo_images/lund_normal_2.jpg",
+    "media/geo_images/lyon_normal_1.jpg",
+    "media/geo_images/lyon_normal_2.jpg",
+    "media/geo_images/lyon_normal_3.jpg",
+    "media/geo_images/lyon_normal_4.jpg",
+    "media/geo_images/madrid_normal_1.jpg",
+    "media/geo_images/madrid_normal_2.jpg",
+    "media/geo_images/madrid_normal_3.jpg",
+    "media/geo_images/madrid_normal_4.jpg",
+    "media/geo_images/malmo_normal_1.jpg",
+    "media/geo_images/malmo_normal_2.jpg",
+    "media/geo_images/manchester_normal_1.jpg",
+    "media/geo_images/manchester_normal_2.jpg",
+    "media/geo_images/manchester_normal_3.jpg",
+    "media/geo_images/manchester_normal_4.jpg",
+    "media/geo_images/melbourne_normal_1.jpg",
+    "media/geo_images/melbourne_normal_2.jpg",
+    "media/geo_images/mexico_city_normal_1.jpg",
+    "media/geo_images/mexico_city_normal_2.jpg",
+    "media/geo_images/mexico_normal_1.jpg",
+    "media/geo_images/mexico_normal_2.jpg",
+    "media/geo_images/mexico_normal_3.jpg",
+    "media/geo_images/mexico_normal_4.jpg",
+    "media/geo_images/mexico_normal_5.jpg",
+    "media/geo_images/mexico_normal_6.jpg",
+    "media/geo_images/new_york_normal_1.jpg",
+    "media/geo_images/new_york_normal_2.jpg",
+    "media/geo_images/nice_normal_1.jpg",
+    "media/geo_images/nice_normal_2.jpg",
+    "media/geo_images/oaxaca_normal_1.jpg",
+    "media/geo_images/oaxaca_normal_2.jpg",
+    "media/geo_images/paris_normal_1.jpg",
+    "media/geo_images/paris_normal_2.jpg",
+    "media/geo_images/paris_normal_3.jpg",
+    "media/geo_images/paris_normal_4.jpg",
+    "media/geo_images/salamanca_normal_1.jpg",
+    "media/geo_images/salamanca_normal_2.jpg",
+    "media/geo_images/salamanca_normal_3.jpg",
+    "media/geo_images/salamanca_normal_4.jpg",
+    "media/geo_images/san_francisco_normal_1.jpg",
+    "media/geo_images/san_francisco_normal_2.jpg",
+    "media/geo_images/santiago_normal_1.jpg",
+    "media/geo_images/santiago_normal_2.jpg",
+    "media/geo_images/sevilla_normal_1.jpg",
+    "media/geo_images/sevilla_normal_2.jpg",
+    "media/geo_images/sevilla_normal_3.jpg",
+    "media/geo_images/sevilla_normal_4.jpg",
+    "media/geo_images/sheffield_normal_1.jpg",
+    "media/geo_images/sheffield_normal_2.jpg",
+    "media/geo_images/sheffield_normal_3.jpg",
+    "media/geo_images/sheffield_normal_4.jpg",
+    "media/geo_images/sidney_normal_1.jpg",
+    "media/geo_images/sidney_normal_2.jpg",
+    "media/geo_images/sidney_normal_3.jpg",
+    "media/geo_images/sidney_normal_4.jpg",
+    "media/geo_images/spain_normal_1.jpg",
+    "media/geo_images/spain_normal_2.jpg",
+    "media/geo_images/spain_normal_3.jpg",
+    "media/geo_images/spain_normal_4.jpg",
+    "media/geo_images/spain_normal_5.jpg",
+    "media/geo_images/spain_normal_6.jpg",
+    "media/geo_images/stockholm_normal_1.jpg",
+    "media/geo_images/stockholm_normal_2.jpg",
+    "media/geo_images/stockholm_normal_3.jpg",
+    "media/geo_images/stockholm_normal_4.jpg",
+    "media/geo_images/sweden_normal_1.jpg",
+    "media/geo_images/sweden_normal_2.jpg",
+    "media/geo_images/sweden_normal_3.jpg",
+    "media/geo_images/sweden_normal_4.jpg",
+    "media/geo_images/sweden_normal_5.jpg",
+    "media/geo_images/sweden_normal_6.jpg",
+    "media/geo_images/toulouse_normal_1.jpg",
+    "media/geo_images/toulouse_normal_2.jpg",
+    "media/geo_images/toulouse_normal_3.jpg",
+    "media/geo_images/toulouse_normal_4.jpg",
+    "media/geo_images/united_kingdom_normal_1.jpg",
+    "media/geo_images/united_kingdom_normal_2.jpg",
+    "media/geo_images/united_kingdom_normal_3.jpg",
+    "media/geo_images/united_kingdom_normal_4.jpg",
+    "media/geo_images/united_kingdom_normal_5.jpg",
+    "media/geo_images/united_kingdom_normal_6.jpg",
+    "media/geo_images/uppsala_normal_1.jpg",
+    "media/geo_images/uppsala_normal_2.jpg",
+    "media/geo_images/uppsala_normal_3.jpg",
+    "media/geo_images/uppsala_normal_4.jpg",
+    "media/geo_images/usa_normal_1.jpg",
+    "media/geo_images/usa_normal_2.jpg",
+    "media/geo_images/usa_normal_3.jpg",
+    "media/geo_images/usa_normal_4.jpg",
+    "media/geo_images/valparaiso_normal_1.jpg",
+    "media/geo_images/valparaiso_normal_2.jpg",
+    "media/geo_images/washington_normal_1.jpg",
+    "media/geo_images/washington_normal_2.jpg",
+    "media/geo_images/york_normal_1.jpg",
+    "media/geo_images/york_normal_2.jpg", ];
+  for (let i = 0; i < 3; i++) {
+    let randomIndex = Math.floor(Math.random() * imagePaths.length);
+    let img = document.createElement('img');
+    img.src = imagePaths[randomIndex];
+    container.appendChild(img);
+  }
+  
 
   
-  newImg1.src = "media/geo_images/argentina_normal_1.jpg";
-  newImg2.src = "media/geo_images/argentina_normal_2.jpg";
-  newImg3.src = "media/geo_images/argentina_normal_3.jpg";
+  let headerTextContainer = document.createElement("div");
+  let headerText = document.createElement('h1');
+  let headerText2 = document.createElement('h1');
+  headerText.textContent = "Utbytesstudier";
+  headerText2.textContent = "Missa inte chansen!";
+  
+  container.appendChild(headerTextContainer);
+  headerTextContainer.appendChild(headerText);
+  headerTextContainer.appendChild(headerText2);
+  
+  headerTextContainer.className = "header_text";
+
 }
+

@@ -36,6 +36,5 @@ function render_programme (parent, programme)
   const image_path = array_random_element(city.imagesNormal);
   container.style.backgroundImage = `url(./media/geo_images/${image_path})`;
 
-  // Extra (optional): Lägg till koden som behövs för att knappen "More Info" ska fungera.
-  // Du måste också uppdatera CSS-koden. Här i JS får du endast lägga till eller ta bort en CSS-klass.
+
 }

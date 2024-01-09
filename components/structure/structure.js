@@ -19,3 +19,6 @@ function render_structure ()
     right_bottom: container.querySelector("#right_bottom"),
   };
 }
+
+
+

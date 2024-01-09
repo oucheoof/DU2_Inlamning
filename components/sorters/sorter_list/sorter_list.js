@@ -1,5 +1,4 @@
-// Koden i denna fil behöver du endast förstå om du vill jobba för VG i projektet.
-// Den ingår inte i redovisningen av inlämningsuppgiften.
+
 
 function render_sorter_list (parent)
 {
