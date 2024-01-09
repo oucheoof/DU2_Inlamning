@@ -49,7 +49,7 @@ function filter_by_city (programmes)
   const checked_city_ids = array_map(checked_level_objects, function (city_object) {
     return city_object.id;
   });
-s
+
   const university_ids = [];
   for (let city_id of checked_city_ids)
   {
